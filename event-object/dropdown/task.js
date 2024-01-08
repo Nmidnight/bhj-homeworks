@@ -8,7 +8,8 @@ btn.addEventListener('click', () => {
 
 [...menuLink].forEach( i => {
     i.addEventListener('click', () =>{
-    btn.textContent = i.textContent})
+    btn.textContent = i.textContent;
+    menuList.classList.remove('dropdown__list_active');
+    });
     return false;
-}
-)
+});
