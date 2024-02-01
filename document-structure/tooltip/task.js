@@ -9,15 +9,16 @@ links.forEach(elem => {
         event.preventDefault();
         target = event.target;
 
-        if(target.title === tooltip.innerText){
+        if(this.target.title === tooltip.textContent){
             tooltip.classList.toggle('tooltip_active');
-        };
+        } else  tooltip.classList.add('tooltip_active')
+
         
-        tooltip.innerText = target.title;
+        tooltip.innerText = this.target.title;
         const { bottom, left } = target.getBoundingClientRect();
         tooltip.style = `left: ${left}px; top: ${bottom}px`;
         target.insertAdjacentElement('afterEnd', tooltip);
-        tooltip.classList.add('tooltip_active');
+        
     })
 
 })

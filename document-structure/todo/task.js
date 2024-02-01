@@ -1,11 +1,11 @@
 const btn = document.querySelector('.tasks__add');
 const input = document.querySelector('.tasks__input');
 const noteList = document.querySelector('.tasks__list');
-
+const form = document.querySelector('.tasks__control')
 
 function newNote() {
     noteList.insertAdjacentHTML(
-        'afterEnd',
+        'beforeEnd',
         `<div class="task">
         <div class="task__title">${input.value}
         </div>
@@ -25,5 +25,5 @@ btn.addEventListener('click', e => {
     if (input.value.trim() != ''){
         newNote();
     }
-
+    form.reset();
 })
