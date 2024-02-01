@@ -5,7 +5,7 @@ const form = document.querySelector('.tasks__control')
 
 function newNote() {
     noteList.insertAdjacentHTML(
-        'beforeEnd',
+        'afterBegin',
         `<div class="task">
         <div class="task__title">${input.value}
         </div>
